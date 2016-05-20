@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <title>Accelerated Cloud Development with Angular 2 & NodeJS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script>
+      System.config({
+        "defaultJSExtensions": true,
+        "packageConfigPaths": [
+          "/node_modules/*/package.json",
+          "/node_modules/**/package.json",
+          "/node_modules/@angular/*/package.json"
+        ],
+        "paths": {
+          "app/main": "/app/main",
+          "rxjs/*": "/rxjs/*",
+          "app/*": "/app/*",
+          "*": "/node_modules/*"
+        },
+        "packages": {
+          "rxjs": {
+            "defaultExtension": false
+          }
+        }
+      })
+    </script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+  </head>
+  <body>
+    It works
+  </body>
+</html>
